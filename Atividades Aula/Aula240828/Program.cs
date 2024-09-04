@@ -15,11 +15,11 @@ for (int i = 0; numerosPares.Count <= 100 && numerosImpares.Count <= 100;  i++)
 
 Console.Write("Números pares: ");
 foreach (var i in  numerosPares)
-    Console.Write($"{i},");
+    Console.Write($"{i}, ");
 
 Console.WriteLine();
 Console.WriteLine();
 Console.Write("Números ímpares: ");
 foreach (var i in numerosImpares)
-    Console.Write($"{i},");
+    Console.Write($"{i}, ");
 
