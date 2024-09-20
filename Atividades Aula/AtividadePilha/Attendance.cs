@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AtividadePilha.Models
+namespace AtividadePilha
 {
-    public class Attendance
+    internal class Attendance
     {
         public int Id { get; set; }
-        public int AttendantId { get; set; }
-        public DateTime Arrival { get; set; }
+        public DateTime ArrivalTime { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string? Doctor { get; set; }
