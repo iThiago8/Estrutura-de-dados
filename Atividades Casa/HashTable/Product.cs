@@ -12,9 +12,9 @@ namespace HashTable
         public int Id { get; set; }
         public string? Name { get; set; }
 
-        public int GetNextId()
+        public override string? ToString()
         {
-
+            return Name;
         }
     }
 }
