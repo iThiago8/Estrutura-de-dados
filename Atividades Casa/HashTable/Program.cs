@@ -24,6 +24,11 @@ for (int i = 1; i < 10; i++)
     shelves.Add(products.Dequeue(), $"C{i}");
 }
 
+foreach (DictionaryEntry p in shelves)
+{
+    Console.WriteLine($"{p.Key.ToString()} - {p.Value}");
+}
+
 Console.WriteLine("Escreva o código do produto");
 bool parsing = false;
 int productId = 0;
@@ -35,7 +40,7 @@ while(!parsing)
         Console.WriteLine("Favor inserir um valor válido");
 }
 
-Product keyToFind = new Product() { Id = productId };
+Product keyToFind = new() { Id = productId };
 if (shelves[keyToFind] != null)
     Console.WriteLine($"O produto está na prateleira: {shelves[keyToFind]}");
 else
