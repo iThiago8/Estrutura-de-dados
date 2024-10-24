@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ShellSort
+﻿namespace ShellSort
 {
 	public class ShellSort
 	{
-		public static void Sort<T>(T[] array) where T : IComparable
+		public static void Sort<T>(List<T> array) where T : IComparable
 		{
-			int n = array.Length;
+			int n = array.Count;
 
 			for (int gap = n / 2; gap > 0; gap /= 2)
 			{
@@ -23,13 +17,17 @@ namespace ShellSort
 						array[j] = array[j - gap];
 					}
 					array[j] = temp;
+
 					foreach (var item in array)
+					{
 						Console.Write($"{item} ");
-                    Console.WriteLine();
+						Thread.Sleep(100);
+					}
+
+					Console.WriteLine();
 				}
 			}
 		}
 
 	}
 }
-
