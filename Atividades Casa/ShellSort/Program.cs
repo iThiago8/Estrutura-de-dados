@@ -11,7 +11,7 @@
 }
 
 Console.WriteLine("Digite 1 para digitar novos números");
-Console.WriteLine("Digite 2 para ordenar os produtos já cadastrados");
+Console.WriteLine("Digite 2 para ordenar os números já cadastrados");
 
 
 int option = ReadNumber();

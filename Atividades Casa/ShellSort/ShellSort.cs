@@ -12,22 +12,52 @@
 				{
 					T temp = array[i];
 					int j;
-					for (j = i; j >= gap && array[j - gap].CompareTo(temp) > 0; j -= gap)
+					bool houveTroca = false; 
+					bool houveComparacaoSemTroca = false; 
+
+					
+					for (j = i; j >= gap; j -= gap)
 					{
-						array[j] = array[j - gap];
+						if (array[j - gap].CompareTo(temp) > 0)
+						{
+							array[j] = array[j - gap];
+							houveTroca = true; 
+						}
+						else
+						{
+							houveComparacaoSemTroca = true;
+							break;
+						}
 					}
+
+					
 					array[j] = temp;
 
-					foreach (var item in array)
+					
+					for (int k = 0; k < array.Count; k++)
 					{
-						Console.Write($"{item} ");
-						Thread.Sleep(100);
+						if (houveTroca && (k == j || k == i))
+						{
+							Console.ForegroundColor = ConsoleColor.Red;
+							Console.Write($"{array[k]} ");
+							Console.ResetColor();
+						}
+						else if (!houveTroca && houveComparacaoSemTroca && (k == j || k == j - gap)) 
+						{
+							Console.ForegroundColor = ConsoleColor.Yellow;
+							Console.Write($"{array[k]} ");
+							Console.ResetColor();
+						}
+						else
+						{
+							Console.Write($"{array[k]} ");
+						}
 					}
 
 					Console.WriteLine();
+					Thread.Sleep(100); 
 				}
 			}
 		}
-
 	}
 }
