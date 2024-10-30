@@ -14,7 +14,6 @@
 					int j;
 					bool houveTroca = false; 
 					bool houveComparacaoSemTroca = false; 
-
 					
 					for (j = i; j >= gap; j -= gap)
 					{
@@ -29,10 +28,8 @@
 							break;
 						}
 					}
-
 					
 					array[j] = temp;
-
 					
 					for (int k = 0; k < array.Count; k++)
 					{

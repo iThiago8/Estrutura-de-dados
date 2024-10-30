@@ -50,14 +50,8 @@ while (loop)
 	}
 }
 
-
-
-
 ShellSort.ShellSort.Sort(arr);
 Console.WriteLine();
 
 foreach (var item in arr)
-{
     Console.Write($"{item} ");
-}
-
