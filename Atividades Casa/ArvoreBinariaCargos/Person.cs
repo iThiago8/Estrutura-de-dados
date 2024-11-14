@@ -19,5 +19,9 @@ namespace ArvoreBinariaCargos
             Name = name;
             Role = role;
         }
+        public override string ToString()
+        {
+            return $"{Name} - {Role}";
+        }
     }
 }

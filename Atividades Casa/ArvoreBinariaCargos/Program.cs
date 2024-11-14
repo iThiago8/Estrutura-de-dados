@@ -70,3 +70,6 @@ company.Root.Children[2].Children = new List<Node<Person>>()
         Parent = company.Root
     }
 };
+
+
+company.PrintTree(company.Root);

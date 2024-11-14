@@ -8,13 +8,13 @@ namespace ArvoreBinariaCargos
 {
 	public class Node<T>
 	{
-		readonly string[] hierarchy = ["CEO", "Head", "Senior", "Junior", "Intern"];
-
 		public T? Data { get; set; }
+		
 		public Node<T>? Parent { get; set; }
+		
 		public List<Node<T>>? Children { get; set; } = [];
 
-		public string GetHeight()
+		public int GetHeight()
 		{
 			int index = 0;
 			Node<T> current = this;
@@ -23,7 +23,12 @@ namespace ArvoreBinariaCargos
 				index++;
 				current = current.Parent;
 			}
-			return hierarchy[index];
+			return index;
 		}
-	}
+
+        public override string ToString()
+        {
+            return $"{Data}";
+        }
+    }
 }
