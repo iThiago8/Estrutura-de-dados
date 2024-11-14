@@ -15,12 +15,12 @@ namespace ArvoreBinaria
 		}
 		public BinaryTreeNode<T>? Left
 		{
-			get {  return (BinaryTreeNode<T>)Children[0]; }
+			get { return Children.Count > 0 ? (BinaryTreeNode<T>)Children[0] : null!; }
 			set { Children[0] = value!; }
 		}
 		public BinaryTreeNode<T> Right
 		{
-			get { return (BinaryTreeNode<T>)Children[1]; }
+			get { return Children.Count > 0 ? (BinaryTreeNode<T>)Children[1] : null!; }
 			set { Children[1] = value; }
 		}
     }

@@ -122,9 +122,9 @@ namespace ArvoreBinaria
                                     {
                                         Data = new QuizItem("Apply for  summer internship program!")
                                     }
-                                    }
                                 }
                             }
+                        }
                     }
                 }
             };

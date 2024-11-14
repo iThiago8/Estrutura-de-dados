@@ -13,17 +13,17 @@ while (node != null)
         {
             case ConsoleKey.Y:
                 binaryTree.WriteAnswer(" Yes");
-                node = node.Left;
+                node = node.Left ?? null!;
                 break;
             case ConsoleKey.N:
                 binaryTree.WriteAnswer(" No");
-                node = node.Right;
+                node = node.Right ?? null!;
                 break;
         }
     }
     else
     {
-        binaryTree.WriteAnswer(node.Data.Text);
-        node = null;
+        binaryTree.WriteAnswer(node.Data!.Text);
+        node = null!;
     }
 }
